@@ -33,25 +33,25 @@ public class FrmNuevoCliente extends JDialog {
         getContentPane().add(contentPanel, BorderLayout.CENTER);
         contentPanel.setLayout(null);
 
-        // Crear campos
+        
         crearCampos();
         
-        // Si estamos editando, cargar datos
+        
         if (cliente != null) {
             cargarDatosCliente();
         }
 
-        // Panel de botones
+       
         JPanel buttonPane = new JPanel();
         buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
         getContentPane().add(buttonPane, BorderLayout.SOUTH);
 
-        // Botón Guardar
+      
         JButton btnGuardar = new JButton("Guardar");
         btnGuardar.addActionListener(e -> guardarCliente());
         buttonPane.add(btnGuardar);
 
-        // Botón Cancelar
+      
         JButton btnCancelar = new JButton("Cancelar");
         btnCancelar.addActionListener(e -> {
             listaClientes.resetVentanaCliente();
@@ -59,7 +59,7 @@ public class FrmNuevoCliente extends JDialog {
         });
         buttonPane.add(btnCancelar);
 
-        // Listener para cuando se cierre la ventana
+       
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
