@@ -23,7 +23,7 @@ public class FrmListaClientes extends JInternalFrame {
         setBounds(100, 100, 750, 400);
         getContentPane().setLayout(null);
 
-        // ScrollPane y Tabla
+       
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBounds(20, 50, 690, 280);
         getContentPane().add(scrollPane);
@@ -40,7 +40,7 @@ public class FrmListaClientes extends JInternalFrame {
         };
         tblCliente.setModel(modelo);
 
-        // Configurar columna del botón
+        
         TableColumn columnaBotones = tblCliente.getColumnModel().getColumn(6);
         columnaBotones.setCellRenderer(new BotonRenderer());
         columnaBotones.setCellEditor(new BotonEditor(new JCheckBox()));
