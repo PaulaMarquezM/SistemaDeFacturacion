@@ -17,7 +17,7 @@ public class Cliente {
         this.email = email;
     }
 
-    // Getters y Setters
+    
     public String getCedula() { return cedula; }
     public void setCedula(String cedula) { this.cedula = cedula; }
     
