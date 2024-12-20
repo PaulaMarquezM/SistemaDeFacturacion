@@ -47,7 +47,7 @@ public class FrmListaClientes extends JInternalFrame {
 
         scrollPane.setViewportView(tblCliente);
 
-        // Botón Agregar Cliente
+      
         JButton btnAgregar = new JButton("Agregar Cliente");
         btnAgregar.setBounds(20, 15, 150, 25);
         btnAgregar.addActionListener(new ActionListener() {
@@ -75,7 +75,7 @@ public class FrmListaClientes extends JInternalFrame {
     }
 
     public void cargarDatosEnTabla(Cliente cliente) {
-        // Verificar si la cédula ya existe
+        
         for (int i = 0; i < modelo.getRowCount(); i++) {
             if (cliente.getCedula().equals(modelo.getValueAt(i, 0))) {
                 JOptionPane.showMessageDialog(this,
@@ -115,7 +115,7 @@ public class FrmListaClientes extends JInternalFrame {
         nuevoClienteAbierto = false;
     }
 
-    // Clase para renderizar el botón
+    
     class BotonRenderer extends JButton implements TableCellRenderer {
         public BotonRenderer() {
             setOpaque(true);
@@ -129,7 +129,7 @@ public class FrmListaClientes extends JInternalFrame {
         }
     }
 
-    // Clase para manejar la edición
+   
     class BotonEditor extends DefaultCellEditor {
         protected JButton button;
         private boolean isPushed;
