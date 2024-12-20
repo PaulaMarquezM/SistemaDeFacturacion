@@ -16,11 +16,11 @@ public class FrmMenuPrincipal extends JFrame {
         setBounds(100, 100, 800, 600);
         setTitle("Sistema de Facturación v1.0.0");
         
-        // Crear DesktopPane
+        
         desktopPane = new JDesktopPane();
         setContentPane(desktopPane);
         
-        // Crear Menú
+  
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
         
