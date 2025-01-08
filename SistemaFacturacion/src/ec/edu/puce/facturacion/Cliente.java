@@ -16,8 +16,18 @@ public class Cliente {
         this.telefono = telefono;
         this.email = email;
     }
+    public Cliente() {
+        
+        this.cedula = "";
+        this.nombre = "";
+        this.apellido = "";
+        this.telefono = "";
+        this.email = "";
+        this.direccion = "";
+    }
 
-    // Getters y Setters
+
+   
     public String getCedula() { return cedula; }
     public void setCedula(String cedula) { this.cedula = cedula; }
     
@@ -35,4 +45,4 @@ public class Cliente {
     
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-}
+} 

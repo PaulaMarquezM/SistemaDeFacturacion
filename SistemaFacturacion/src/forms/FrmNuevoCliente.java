@@ -1,12 +1,14 @@
 package forms;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 
 import ec.edu.puce.facturacion.Cliente;
+import ec.edu.puce.facturacion.Factura;
 
 import java.awt.*;
 import java.awt.event.*;
-
+import java.util.ArrayList;
 
 public class FrmNuevoCliente extends JDialog {
     private static final long serialVersionUID = 1L;
@@ -24,34 +26,29 @@ public class FrmNuevoCliente extends JDialog {
         super((Frame) SwingUtilities.getWindowAncestor(parent), true);
         this.listaClientes = parent;
         this.clienteEditar = cliente;
-        
+
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle(cliente == null ? "Nuevo Cliente" : "Editar Cliente");
-        setBounds(100, 100, 450, 300);
+        setBounds(100, 100, 450, 400);
         getContentPane().setLayout(new BorderLayout());
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         getContentPane().add(contentPanel, BorderLayout.CENTER);
         contentPanel.setLayout(null);
 
-        // Crear campos
         crearCampos();
-        
-        // Si estamos editando, cargar datos
+
         if (cliente != null) {
             cargarDatosCliente();
         }
 
-        // Panel de botones
         JPanel buttonPane = new JPanel();
         buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
         getContentPane().add(buttonPane, BorderLayout.SOUTH);
 
-        // Botón Guardar
         JButton btnGuardar = new JButton("Guardar");
         btnGuardar.addActionListener(e -> guardarCliente());
         buttonPane.add(btnGuardar);
 
-        // Botón Cancelar
         JButton btnCancelar = new JButton("Cancelar");
         btnCancelar.addActionListener(e -> {
             listaClientes.resetVentanaCliente();
@@ -59,13 +56,12 @@ public class FrmNuevoCliente extends JDialog {
         });
         buttonPane.add(btnCancelar);
 
-        // Listener para cuando se cierre la ventana
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 listaClientes.resetVentanaCliente();
             }
-            
+
             @Override
             public void windowClosed(WindowEvent e) {
                 listaClientes.resetVentanaCliente();
@@ -93,13 +89,13 @@ public class FrmNuevoCliente extends JDialog {
 
     private void cargarDatosCliente() {
         txtCedula.setText(clienteEditar.getCedula());
-        txtCedula.setEditable(false);
         txtNombre.setText(clienteEditar.getNombre());
         txtApellido.setText(clienteEditar.getApellido());
         txtDireccion.setText(clienteEditar.getDireccion());
         txtTelefono.setText(clienteEditar.getTelefono());
         txtEmail.setText(clienteEditar.getEmail());
     }
+
     private boolean validarCampos() {
         if (txtCedula.getText().trim().isEmpty() || 
             txtNombre.getText().trim().isEmpty() || 
@@ -127,7 +123,7 @@ public class FrmNuevoCliente extends JDialog {
             );
 
             if (clienteEditar == null) {
-                listaClientes.cargarDatosEnTabla(cliente);
+                listaClientes .cargarDatosEnTabla(cliente);
             } else {
                 listaClientes.actualizarDatosEnTabla(cliente);
             }
@@ -142,4 +138,3 @@ public class FrmNuevoCliente extends JDialog {
         }
     }
 }
-  
