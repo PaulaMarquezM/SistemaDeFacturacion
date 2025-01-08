@@ -16,11 +16,22 @@ public class FrmMenuPrincipal extends JFrame {
     public FrmMenuPrincipal() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 600);
+<<<<<<< HEAD
         setTitle("Sistema de Facturación v2.0.0");
 
+=======
+        setTitle("Sistema de Facturación v1.0.0");
+        
+        
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         desktopPane = new JDesktopPane();
         setContentPane(desktopPane);
+<<<<<<< HEAD
 
+=======
+        
+  
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
@@ -106,9 +117,13 @@ public class FrmMenuPrincipal extends JFrame {
         });
         mnArchivo.add(mntmSalir);
     }
+<<<<<<< HEAD
 
     public static void main(String[] args) {
         FrmMenuPrincipal frame = new FrmMenuPrincipal();
         frame.setVisible(true);
     }
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git

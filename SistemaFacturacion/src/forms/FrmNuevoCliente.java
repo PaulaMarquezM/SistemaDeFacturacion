@@ -35,20 +35,41 @@ public class FrmNuevoCliente extends JDialog {
         getContentPane().add(contentPanel, BorderLayout.CENTER);
         contentPanel.setLayout(null);
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         crearCampos();
+<<<<<<< HEAD
 
+=======
+        
+        
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         if (cliente != null) {
             cargarDatosCliente();
         }
 
+<<<<<<< HEAD
+=======
+       
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         JPanel buttonPane = new JPanel();
         buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
         getContentPane().add(buttonPane, BorderLayout.SOUTH);
 
+<<<<<<< HEAD
+=======
+      
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         JButton btnGuardar = new JButton("Guardar");
         btnGuardar.addActionListener(e -> guardarCliente());
         buttonPane.add(btnGuardar);
 
+<<<<<<< HEAD
+=======
+      
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         JButton btnCancelar = new JButton("Cancelar");
         btnCancelar.addActionListener(e -> {
             listaClientes.resetVentanaCliente();
@@ -56,6 +77,10 @@ public class FrmNuevoCliente extends JDialog {
         });
         buttonPane.add(btnCancelar);
 
+<<<<<<< HEAD
+=======
+       
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {

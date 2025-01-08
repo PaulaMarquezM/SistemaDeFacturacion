@@ -26,8 +26,12 @@ public class Cliente {
         this.direccion = "";
     }
 
+<<<<<<< HEAD
 
    
+=======
+    
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
     public String getCedula() { return cedula; }
     public void setCedula(String cedula) { this.cedula = cedula; }
     
@@ -45,4 +49,8 @@ public class Cliente {
     
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> branch 'master' of https://github.com/PaulaMarquezM/SistemaDeFacturacion.git
