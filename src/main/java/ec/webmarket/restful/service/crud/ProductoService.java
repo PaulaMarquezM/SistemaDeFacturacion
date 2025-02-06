@@ -110,4 +110,10 @@ public class ProductoService extends GenericCrudServiceImpl<Producto, ProductoDT
             throw new IllegalStateException("No se puede eliminar el producto porque tiene registros asociados.");
         }
     }
+
+	@Override
+	public Optional<Producto> find(ProductoDTO dto) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
 }
